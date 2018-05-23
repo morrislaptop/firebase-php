@@ -52,7 +52,7 @@ class ApiClient
         $this->request('PATCH', $uri, ['json' => $values]);
     }
 
-    private function request(string $method, $uri, array $options = []): ResponseInterface
+    protected function request(string $method, $uri, array $options = []): ResponseInterface
     {
         $request = new Request($method, $uri);
 
